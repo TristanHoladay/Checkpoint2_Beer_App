@@ -1,0 +1,15 @@
+#title {
+    display: grid;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#login-form {
+    width: 100%;
+    margin: 2em 5em;
+}
+
+form {
+    width: 75%;
+    margin: 1em 1em;
+}
