@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { IUser } from '../interfaces/user';
 
 @Component({
-  selector: 'app-register',
+  selector: 'register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -32,8 +32,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(user) {
     this.authService.register(user).subscribe(user => {
       this.newUser = user; 
-      if (user) this.router.navigateByUrl("userprofile");
-    })
+      if (user) this.router.navigateByUrl("login");
+    });
   }
-
 }

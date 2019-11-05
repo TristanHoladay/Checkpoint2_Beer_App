@@ -1,4 +1,9 @@
-<div>
+<div id="title">
+    <h1>
+      Please Register
+    </h1>
+</div>
+<div id="register-form">
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
     <div class="form-group">
       <label for="email">
@@ -11,7 +16,7 @@
       <label for="firstName">
         First Name
       </label>
-      <input id="firstName" type="text" formControlName="firstname" class="form-control" />
+      <input id="firstName" type="text" formControlName="firstName" class="form-control" />
     </div>
 
     <div class="form-group">
