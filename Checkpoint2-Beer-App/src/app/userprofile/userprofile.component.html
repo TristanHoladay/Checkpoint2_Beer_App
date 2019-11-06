@@ -1,1 +1,87 @@
-<p>userprofile works!</p>
+<div id="page-container">
+  <div>
+    <img src="" alt="" />
+    <button type="" (click)="">Edit</button>
+  </div>
+
+  <form [formGroup]="profileForm" *ngIf="edit">
+    <div class="form-group">
+      <label>
+        Picture URL
+      </label>
+      <input
+        id="picURL"
+        type="text"
+        formControl="picURL"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Date of Birth
+      </label>
+      <input id="dob" type="date" formControl="dob" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label>
+        City and State
+      </label>
+      <input
+        id="address"
+        type="address"
+        formControl="address"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Favorite Food
+      </label>
+      <input
+        id="favFood"
+        type="text"
+        formControl="favFood"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Favorite Movie
+      </label>
+      <input
+        id="favMovie"
+        type="text"
+        formControl="favMovie"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Favorite Artist
+      </label>
+      <input
+        id="favArtist"
+        type="text"
+        formControl="favArtist"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>
+        Other Interests
+      </label>
+      <input
+        id="interests"
+        type="text"
+        formControl="interests"
+        class="form-control"
+      />
+    </div>
+  </form>
+</div>
