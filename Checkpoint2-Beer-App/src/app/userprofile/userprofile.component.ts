@@ -41,7 +41,8 @@ export class UserProfileComponent implements OnInit {
   onSubmit(profile: any) {
     console.log("Submit Successful. Send Data to Database");
     this.edit = false;
-    this.userProfile.DOB = profile.dob;
+    this.userProfile.DOB = profile.FormControl.dob;
+    this.userProfile.homeAddress = profile.FormControl.homeAddress;
   }
 
   logout() {

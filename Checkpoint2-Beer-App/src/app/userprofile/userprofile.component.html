@@ -15,7 +15,7 @@
       <br>
       <h3>Date Of Birth: {{ userProfile.DOB }}</h3>
       <br>
-      <h3>City, State</h3>
+      <h3>City, State: {{ address }}</h3>
     </div>
   </div>
 
@@ -47,7 +47,7 @@
       <input
         id="picURL"
         type="text"
-        formControl="picURL"
+        [formControl]="picURL"
         class="form-control"
       />
     </div>
@@ -72,7 +72,7 @@
       <input
         id="address"
         type="address"
-        formControl="address"
+        [formControl]="address"
         class="form-control"
       />
     </div>
@@ -84,7 +84,7 @@
       <input
         id="favFood"
         type="text"
-        formControl="favFood"
+        [formControl]="favFood"
         class="form-control"
       />
     </div>
@@ -96,7 +96,7 @@
       <input
         id="favMovie"
         type="text"
-        formControl="favMovie"
+        [formControl]="favMovie"
         class="form-control"
       />
     </div>
@@ -108,7 +108,7 @@
       <input
         id="favArtist"
         type="text"
-        formControl="favArtist"
+        [formControl]="favArtist"
         class="form-control"
       />
     </div>
@@ -120,7 +120,7 @@
       <input
         id="interests"
         type="text"
-        formControl="interests"
+        [formControl]="interests"
         class="form-control"
       />
     </div>
