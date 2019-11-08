@@ -1,0 +1,41 @@
+#page-container {
+    margin: 3em 1em 1em 1em;
+}
+
+#edit-cont {
+    display: grid;
+    justify-items: right;
+    width: 90%;
+    padding: 1em 1em;
+}
+
+#edit {
+    display: inline-block;
+}
+
+#logout {
+    display: inline-block;
+}
+
+#pic-container > img {
+    margin: 1em 1em;
+    width: 85%;
+    height: auto;
+    display: block;
+}
+
+form {
+    position: relative;
+    background: white;
+}
+
+#interests {
+    margin: 1em 1em;
+}
+
+footer {
+    width: 100%;
+    height: 2em;
+    margin: 1em 0;
+    padding: 1em;
+}

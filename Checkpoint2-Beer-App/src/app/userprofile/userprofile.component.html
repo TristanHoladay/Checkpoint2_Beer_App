@@ -1,10 +1,45 @@
-<div id="page-container">
-  <div>
-    <img src="" alt="" />
-    <button type="" (click)="">Edit</button>
+<div id="page-container" class="border border-primary rounded sm mb-0 ">
+  <div id="edit-cont" class="row">
+    <button id="edit" (click)="edit = true" class="btn-primary col-1">EDIT</button>
+    <button id="logout" class="btn-warning col-1" (click)="logout()">LOGOUT</button>
+  </div>
+  <div class="row">
+    <div id="pic-container" class="col-4">
+      <img src="../assets/profilePic.jpg" alt="" />
+    </div>
+
+    <div id="personal-info" class="col-sm">
+      <h3>First Name: {{ user.firstName }}</h3>
+      <br>
+      <h3>Last Name: {{ user.lastName }}</h3>
+      <br>
+      <h3>Date Of Birth: {{ userProfile.DOB }}</h3>
+      <br>
+      <h3>City, State</h3>
+    </div>
   </div>
 
-  <form [formGroup]="profileForm" *ngIf="edit">
+  <div id="main-container" class="row">
+  <div id="interests" class="col-5">
+    <h2>Favorite Food</h2>
+    <p>{{ favFood }}</p>
+    <br>
+    <h2>Favorite Movie</h2>
+    <p>{{ favMovie }}</p>
+    <br>
+    <h2>Favorite Artist</h2>
+    <p>{{ favArtist }}</p>
+    <br>
+    <h2>Interests</h2>
+    <p>{{ interests }}</p>
+  </div>
+
+  <form
+    [formGroup]="profileForm"
+    *ngIf="edit"
+    (ngSubmit)="onSubmit(profileForm.value)"
+    class="col-5"
+  >
     <div class="form-group">
       <label>
         Picture URL
@@ -21,7 +56,13 @@
       <label>
         Date of Birth
       </label>
-      <input id="dob" type="date" formControl="dob" class="form-control" />
+      <input
+        id="dob"
+        type="date"
+        [formControl]="dob"
+        class="form-control"
+        ngModel
+      />
     </div>
 
     <div class="form-group">
@@ -83,5 +124,10 @@
         class="form-control"
       />
     </div>
+
+    <button class="btn-primary" type="submit">Save</button>
   </form>
+  </div>
 </div>
+<footer>
+</footer>
