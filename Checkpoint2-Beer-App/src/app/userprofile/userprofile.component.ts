@@ -24,22 +24,26 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-      "picURL": ["../assets/profilePic.jpg"],
-      "dob": ['03/14/1990'],
+      "picURL": [''],
+      "dob": [''],
       "address": [''],
       "favFood": [''],
       "favMovie": [''],
       "favArtist": [''],
       "interests": ['']
     });
-    this.user = this.authService.currentUserValue;
-    console.log(this.user.firstName);
+    this.authService.User.subscribe(data => {
+      this.user = data;
+      console.log(this.user);
+    });
+    console.log(this.authService.currentUserValue);
 
     window.alert("You need to fill out your profile!");
   }
 
   onSubmit(profile: any) {
     console.log("Submit Successful. Send Data to Database");
+    console.log(profile);
     this.edit = false;
   }
 

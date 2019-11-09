@@ -11,7 +11,7 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginform: FormGroup;
+  loginForm: FormGroup;
   error: any;
   loading: boolean;
 
@@ -22,14 +22,14 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loginform = this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       email: new FormControl(),
       password: new FormControl()
     });
   }
 
   onSubmit(loginData) {
-    if (this.loginform.invalid) {
+    if (this.loginForm.invalid) {
       return;
     }
 

@@ -16,10 +16,15 @@ export class AuthService {
       JSON.parse(localStorage.getItem("currentUser"))
     );
     this.currentUser = this.currentUserSubject.asObservable();
+    
   }
 
   public get currentUserValue(): IUser {
     return this.currentUserSubject.value;
+  }
+
+  public get User(): Observable<IUser> {
+    return this.currentUser;
   }
 
   register(user: any): Observable<IUser> {

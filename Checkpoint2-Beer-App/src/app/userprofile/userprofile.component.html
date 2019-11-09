@@ -36,8 +36,8 @@
   </div>
 
   <form
+    *ngIf="edit"
     [formGroup]="profileForm"
-    
     (ngSubmit)="onSubmit(profileForm.value)"
     class="col-5"
   >
@@ -125,6 +125,9 @@
         class="form-control"
       />
     </div>
+    <p> 
+      Form Status: {{ profileForm.status}}
+    </p>
 
     <button class="btn-primary" type="submit">Save</button>
   </form>
