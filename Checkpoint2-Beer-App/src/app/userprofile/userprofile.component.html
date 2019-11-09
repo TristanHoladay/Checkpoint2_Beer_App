@@ -13,10 +13,11 @@
       <br>
       <h3>Last Name: {{ user.lastName }}</h3>
       <br>
-      <h3>Date Of Birth: {{ userProfile.DOB }}</h3>
+      <h3>Date Of Birth: {{ dob }}</h3>
       <br>
       <h3>City, State: {{ address }}</h3>
     </div>
+    
   </div>
 
   <div id="main-container" class="row">
@@ -36,10 +37,11 @@
 
   <form
     [formGroup]="profileForm"
-    *ngIf="edit"
+    
     (ngSubmit)="onSubmit(profileForm.value)"
     class="col-5"
   >
+
     <div class="form-group">
       <label>
         Picture URL
@@ -47,7 +49,7 @@
       <input
         id="picURL"
         type="text"
-        [formControl]="picURL"
+        formControlName="picURL"
         class="form-control"
       />
     </div>
@@ -59,9 +61,8 @@
       <input
         id="dob"
         type="date"
-        [formControl]="dob"
+        formControlName="dob"
         class="form-control"
-        ngModel
       />
     </div>
 
@@ -72,7 +73,7 @@
       <input
         id="address"
         type="address"
-        [formControl]="address"
+        formControlName="address"
         class="form-control"
       />
     </div>
@@ -84,7 +85,7 @@
       <input
         id="favFood"
         type="text"
-        [formControl]="favFood"
+        formControlName="favFood"
         class="form-control"
       />
     </div>
@@ -96,7 +97,7 @@
       <input
         id="favMovie"
         type="text"
-        [formControl]="favMovie"
+        formControlName="favMovie"
         class="form-control"
       />
     </div>
@@ -108,7 +109,7 @@
       <input
         id="favArtist"
         type="text"
-        [formControl]="favArtist"
+        formControlName="favArtist"
         class="form-control"
       />
     </div>
@@ -120,7 +121,7 @@
       <input
         id="interests"
         type="text"
-        [formControl]="interests"
+        formControlName="interests"
         class="form-control"
       />
     </div>

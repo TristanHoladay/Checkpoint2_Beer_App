@@ -24,13 +24,13 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-      picURL: new FormControl(),
-      dob: new FormControl('03/14/1990'),
-      address: new FormControl(),
-      favFood: new FormControl(),
-      favMovie: new FormControl(),
-      favArtist: new FormControl(),
-      interests: new FormControl()
+      "picURL": ["../assets/profilePic.jpg"],
+      "dob": ['03/14/1990'],
+      "address": [''],
+      "favFood": [''],
+      "favMovie": [''],
+      "favArtist": [''],
+      "interests": ['']
     });
     this.user = this.authService.currentUserValue;
     console.log(this.user.firstName);
@@ -41,8 +41,6 @@ export class UserProfileComponent implements OnInit {
   onSubmit(profile: any) {
     console.log("Submit Successful. Send Data to Database");
     this.edit = false;
-    this.userProfile.DOB = profile.FormControl.dob;
-    this.userProfile.homeAddress = profile.FormControl.homeAddress;
   }
 
   logout() {
